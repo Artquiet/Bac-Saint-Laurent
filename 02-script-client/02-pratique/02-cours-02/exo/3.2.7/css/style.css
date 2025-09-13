@@ -1,0 +1,7 @@
+/* min css reset */
+*, 
+::before, 
+::after {
+    background-color: #333;
+    color: bisque;
+}
