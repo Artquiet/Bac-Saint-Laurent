@@ -8,7 +8,7 @@
 let number = Number(prompt("Entrez soit 30, 40 ou 50"));
 
 if (number === 30 || number === 40 || number === 50) {
-    console.log("Valeure entrée correcte");
+    console.log("bez entrée correcte");
 } else {
-    console.log("Valeure entrée incorecte");
+    console.log("Valeur entrée incorrecte");
 }
