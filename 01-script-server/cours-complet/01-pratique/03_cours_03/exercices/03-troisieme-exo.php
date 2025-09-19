@@ -56,22 +56,32 @@
 
     foreach($adress as $adressAcess){
         echo "<p>";
-        foreach($adressAcess as $user) {
-            echo $user . "<br>";
+        foreach($adressAcess as $key => $value) {
+            echo $key . " = " . $value . "<br>";
         }
         echo "</p>";
     }
+    echo "<br>";
+    echo "<br>";
 
     foreach($adress as $adressAcess){
-        echo "<p>";
-        foreach($adressAcess as $user) {
-            echo $user["firstName"] . "<br>";
+      echo "<p>";
+      foreach($adressAcess as $key => $value) {
+        if ($key === "lastName") {
+            // nom en majuscules
+            echo $key . " = " . strtoupper($value) . "<br>";
+        } elseif ($key === "firstName") {
+            // prénom : première lettre majuscule, reste minuscule
+            $value = ucfirst(strtolower($value));
+            echo $key . " = " . $value . "<br>";
+        } else {
+            // les autres infos restent inchangées
+            echo $key . " = " . $value . "<br>";
         }
+      }
         echo "</p>";
-    }
-
-
-    ?>
+  }
+?>
 </body>
 
 </html>  
