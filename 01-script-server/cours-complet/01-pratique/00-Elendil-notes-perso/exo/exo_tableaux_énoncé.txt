@@ -1,0 +1,14 @@
+Créer un script PHP qui :
+
+	* Définit une liste de matières dans un tableau indicé.
+
+	* Définit les informations d’un étudiant avec un tableau associatif.
+
+	* Définit une liste de plusieurs étudiants avec leurs notes dans un tableau multidimensionnel.
+
+	* Affiche les données de différentes façons: 
+		- accès direct 
+		- boucles for 
+		- boucles foreach
+
+	* Termine par un affichage débug avec print_r et var_dump.
