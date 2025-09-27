@@ -1,0 +1,10 @@
+p {
+    color: rgb(110, 0, 0);
+    font-weight: bold;
+}
+
+li {
+    background-color: rgb(110, 0, 0);
+    color: bisque;
+    font-weight: bold;
+}
