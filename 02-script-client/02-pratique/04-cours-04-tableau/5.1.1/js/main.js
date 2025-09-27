@@ -3,4 +3,9 @@
 // après l'avoir initialisé de telle manière que <br>
 // chaque élément soit égal à son indice
 
-alert("tab exo 1");
+let arr = [];
+
+for (i = 1; i <= 5; i++) {
+    arr[i] = i;
+    console.log(`Valeur de i : ${i} valeur de arr = ${arr[i]}`);
+}
