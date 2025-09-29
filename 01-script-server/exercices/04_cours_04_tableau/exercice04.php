@@ -8,6 +8,7 @@
 </head>
 <body>
 <!-- Partie 4 – Enchaîner correctement les mois
+ push le code
 Modifiez votre code pour que les mois aient le bon nombre de jours :
 1.	Cette fois, le premier jour du mois suivant doit dépendre du dernier jour du mois précédent.
 2.	Exemple : si janvier se termine un mercredi, alors février doit commencer un jeudi.
