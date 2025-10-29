@@ -1,0 +1,19 @@
+/* basic reset css */
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    background-color: #333;
+    color: bisque;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
