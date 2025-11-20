@@ -1,0 +1,23 @@
+1) Créez un fichier nommé exe_01.txt et écrivez le 
+texte "Bonjour" à l'intérieur ;
+
+2) Créez un fichier nommé exe_02.txt et écrivez l'adresse IP 
+du client (utilisant $_SERVER["REMOTE_ADDR"]) à l'intérieur ;
+
+3) Créez un fichier nommé exe_03.txt. Écrivez l'adresse IP
+du client suivi d'un saut de ligne à la fin du fichier, 
+en utilisant FILE_APPEND pour ajouter du contenu sans 
+écraser le fichier existant ;
+
+4) Créez un fichier nommé exe_04.txt. 
+Écrivez la date actuelle au format "Y-m-d H:i:s", 
+suivi de l'adresse IP du client et d'un saut de ligne, 
+en utilisant FILE_APPEND ;
+
+5) Créez un fichier nommé exe_01.php. 
+Écrivez un script PHP qui affiche le texte "Bonjour" 
+lorsqu'il est appelé dans le navigateur ;
+
+6) Créez un fichier nommé exe_02.php. Écrivez un script 
+PHP qui déclare une variable $prenom avec la valeur "Bob"
+et affiche "Bonjour Bob" lorsqu'il est appelé dans le navigateur.
