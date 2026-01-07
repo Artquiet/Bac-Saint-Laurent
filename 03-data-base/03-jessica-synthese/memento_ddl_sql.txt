@@ -1,0 +1,84 @@
+-- DATABASE
+CREATE DATABASE databasename;
+SHOW DATABASES;
+USE databasename;
+DROP databasename;
+
+-- TABLE
+CREATE TABLE table_name(
+    column_name DATATYPE,
+    ...
+);
+SHOW tables;
+DROP TABLE table_name;
+    -- column
+ALTER TABLE table_name
+ADD columnX_name CHAR(255);
+ALTER TABLE table_name
+MODIFY COLUMN columnX_name INT;
+ALTER TABLE table_name
+DROP COLUMN columnX_name;
+    -- fields
+        -- AUTO_INCREMENT
+ALTER TABLE table_name MODIFY COLUMN column_char_name INT AUTO_INCREMENT;
+ALTER TABLE table_name AUTO_INCREMENT=100;
+        -- DEFAULT
+ALTER TABLE table_name MODIFY COLUMN column_char_name DEFAULT 'd';
+ALTER TABLE table_name MODIFY COLUMN column_varchar_name DEFAULT "default value";
+ALTER TABLE table_name MODIFY COLUMN column_tinytext_name DEFAULT "default value";
+ALTER TABLE table_name MODIFY COLUMN column_text_name DEFAULT "default value";
+ALTER TABLE table_name MODIFY COLUMN column_mediumtext_name DEFAULT "default value";
+ALTER TABLE table_name MODIFY COLUMN column_longtext_name DEFAULT "default value";
+ALTER TABLE table_name MODIFY COLUMN column_enum_name DEFAULT "val1";
+ALTER TABLE table_name MODIFY COLUMN column_set_name DEFAULT "val1";
+ALTER TABLE table_name MODIFY COLUMN column_bool_name DEFAULT FALSE;
+ALTER TABLE table_name MODIFY COLUMN column_bit_name DEFAULT 0;
+ALTER TABLE table_name MODIFY COLUMN column_tinyint_name DEFAULT 0;
+ALTER TABLE table_name MODIFY COLUMN column_smallint_name DEFAULT 0;
+ALTER TABLE table_name MODIFY COLUMN column_mediumint_name DEFAULT 0;
+ALTER TABLE table_name MODIFY COLUMN column_int_name DEFAULT 0;
+ALTER TABLE table_name MODIFY COLUMN column_bigint_name DEFAULT 0;
+ALTER TABLE table_name MODIFY COLUMN column_float_name DEFAULT 0.0;
+ALTER TABLE table_name MODIFY COLUMN column_decimal_name DEFAULT 0.0;
+ALTER TABLE table_name MODIFY COLUMN column_date_name DEFAULT CURRENT_DATE();
+ALTER TABLE table_name MODIFY COLUMN column_datetime_name DEFAULT CURRENT_DATE();
+ALTER TABLE table_name MODIFY COLUMN column_timestamp_name DEFAULT CURRENT_DATE();
+ALTER TABLE table_name MODIFY COLUMN column_time_name DEFAULT CURRENT_DATE();
+ALTER TABLE table_name MODIFY COLUMN column_year_name DEFAULT CURRENT_DATE();
+    -- constraints
+        -- NOT NULL
+ALTER TABLE table_name 
+ADD CONSTRAINT NN_column_name NOT NULL(column_name);
+        -- UNIQUE
+ALTER TABLE table_name
+ADD CONSTRAINT U_column_name UNIQUE(column_name);
+ALTER TABLE table_name
+DROP INDEX U_column_name;
+        -- PRIMARY KEY
+ALTER TABLE table_name 
+ADD CONSTRAINT PK_column1_name_column2_name
+PRIMARY KEY (column1_name, column2_name);
+ALTER TABLE table_name
+DROP PRIMARY KEY;
+        -- FOREIGN KEY
+ALTER TABLE table_name
+ADD CONSTRAINT FK_column_name
+FOREIGN KEY (column_name) REFERENCES table2_name(column_name);
+ALTER TABLE table_name
+DROP FOREIGN KEY FK_column_name;
+        -- CHECK
+ALTER TABLE table_name
+ADD CONSTRAINT CHK_column_name_min
+CHECK (column_name > 45);
+ALTER TABLE table_name
+DROP CHECK CHK_column_name_min;
+
+-- INDEX
+CREATE [UNIQUE] INDEX index_name
+ON table_name (column1_name, column2_name);
+ALTER TABLE table_name
+DROP INDEX index_name;
+
+-- VIEW
+CREATE [OR REPLACE] VIEW view_name AS
+_select_request_; 

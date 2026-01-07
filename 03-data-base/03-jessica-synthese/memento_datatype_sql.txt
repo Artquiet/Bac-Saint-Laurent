@@ -1,0 +1,46 @@
+-- STRING
+    -- characters
+CHAR(size)      -- @parameter size : [1;255] default = 1
+VARCHAR(size)   -- @parameter size : [1;65 535]
+TINYTEXT	    -- @values : [0;255]
+TEXT(size)	    -- @parameter size : [1;65 535]
+MEDIUMTEXT	    -- @values : [0;16 777 215]
+LONGTEXT        -- @values : [0;4 294 967 295]
+    -- bytes
+BINARY(size)    -- @parameter size : [1-255] default = 1
+VARBINARY(size)	-- @parameter size : [1;65 535]
+    -- BLOBs (Binary Large OBjects)
+TINYBLOB	    -- @values : [0;255]
+BLOB(size)	    -- @values : [0;65 535], @parameter size : [0;65 535]
+MEDIUMBLOB	    -- @values : [0;16 777 215]
+LONGBLOB	    -- @values : [0;4 294 967 295]
+    -- others
+ENUM('val1', '...', 'val65535')
+SET('val1', '...', 'val64')
+-- NUMERIC
+BIT(size)                   -- @parameter size : [1,64] default = 1
+BOOL | BOOLEAN              -- @values : [0;1]
+    -- integer
+TINYINT(size)               -- @parameter size : [1,255], @values : [-128;127]
+SMALLINT(size)	            -- @parameter size : [1,255], @values : [-32 768;32 767]
+MEDIUMINT(size)	            -- @parameter size : [1,255], @values : [-8 388 608;8 388 607]
+INT(size) | INTEGER(size)	-- @parameter size : [1,255], @values : [-2 147 483 648; 2 147 483 647]
+BIGINT(size)	            -- @parameter size : [1,255], @values : [-9 223 372 036 854 775 808; 9 223 372 036 854 775 807]
+    -- UNSIGNED integer
+UNSIGNED TINYINT(size)                       -- @parameter size : [1,255], @values : [0;255]
+UNSIGNED SMALLINT(size)	                     -- @parameter size : [1,255], @values : [0;65 535]
+UNSIGNED MEDIUMINT(size)	                 -- @parameter size : [1,255], @values : [0;16 777 215]
+UNSIGNED INT(size) | UNSIGNED INTEGER(size)	 -- @parameter size : [1,255], @values : [0;4 294 967 295]
+UNSIGNED BIGINT(size)	                     -- @parameter size : [1,255], @values : [0;18 446 744 073 709 551 615]
+    -- float
+FLOAT(size, d)	                    -- @parameter size : [1;65] default 10, @paramater d : [0,30] default 0
+FLOAT(p)	                        -- @paramter p : [0;53]
+DOUBLE(size, d)	                    -- @parameter size : [1;65] default 10, @paramater d : [0,30] default 0
+DOUBLE PRECISION(size, d)	        -- @parameter size : [1;65] default 10, @paramater d : [0,30] default 0
+DEC(size, d) | DECIMAL(size, d)     -- @parameter size : [1;65] default 10, @paramater d : [0,30] default 0
+-- DATE & TIME
+DATE	        -- @format : YYYY-MM-DD, @values : [1000-01-01; 9999-12-31]
+DATETIME(fsp)	-- @format : YYYY-MM-DD hh:mm:ss, @values : [1000-01-01 00:00:00; 9999-12-31 23:59:59]
+TIMESTAMP(fsp)	-- @format : YYYY-MM-DD hh:mm:ss, @values : [1970-01-01 00:00:01; 2038-01-09 03:14:07]
+TIME(fsp)	    -- @format : hh:mm:ss, @values : [-838:59:59; 838:59:59]
+YEAR	        -- @format : YYYY, @values : [0000] & [1901;2155]

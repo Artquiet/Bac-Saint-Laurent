@@ -1,0 +1,37 @@
+-- ARITHMETIC
++	-- Add	
+-	-- Subtract	
+*	-- Multiply	
+/	-- Divide	
+%	-- Modulo
+-- BITWISE
+&	-- Bitwise AND
+|	-- Bitwise OR
+^	-- Bitwise exclusive OR
+-- COMPARISON
+=	-- Equal to	
+>	-- Greater than	
+<	-- Less than	
+>=	-- Greater than or equal to	
+<=	-- Less than or equal to	
+<>	-- Not equal to
+-- COMPOUND
++=	-- Add equals
+-=	-- Subtract equals
+*=	-- Multiply equals
+/=	-- Divide equals
+%=	-- Modulo equals
+&=	-- Bitwise AND equals
+^-=	-- Bitwise exclusive equals
+|*=	-- Bitwise OR equals
+-- LOGICAL
+NOT	condition                   -- Displays a record if the condition(s) is NOT TRUE	
+condition AND condition	        -- TRUE if all the conditions separated by AND is TRUE	
+condition OR condition	        -- TRUE if any of the conditions separated by OR is TRUE	
+value = ALL	(val1, ..., valX)   -- TRUE if all of the subquery values meet the condition	
+value = ANY	(val1, ..., valX)   -- TRUE if any of the subquery values meet the condition	
+value = SOME (val1, ..., valX)	-- TRUE if any of the subquery values meet the condition
+value IN (val1, ..., valX)	    -- TRUE if the operand is equal to one of a list of expressions	
+EXISTS (val1, ..., valX)	    -- TRUE if the subquery returns one or more records	
+value LIKE '%_'	                -- TRUE if the operand matches a pattern	
+value BETWEEN valmin AND valmax -- TRUE if the operand is within the range of comparisons	

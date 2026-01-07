@@ -1,0 +1,150 @@
+**
+**	EXERCICE 3 : REQUETES CLIENTS
+** 			Table "clients" dans base de donnees "test_cours"
+**
+
+
+
+** 3.1. Selection de tous les clients 
+
+SELECT * 
+FROM `clients` 
+
+
+** 3.2. Selection de Nom et Prenom de tous les clients 
+
+SELECT Nom, Prenom
+FROM `clients` 
+
+ou Variante : Nom et prenom dans un m�me champs 
+
+SELECT CONCAT(Nom,' - ',Prenom) AS Nom_complet
+FROM clients
+ORDER BY Nom_complet
+
+
+ou Variante : Nom et prenom en majuscule dans un m�me champs
+
+SELECT CONCAT(Nom,' - ',UPPER(Prenom)) AS Nom_complet
+FROM clients
+ORDER BY Nom_complet
+
+
+** 3.3. Selection de tous les clients habitants au CP = 4800
+
+SELECT * 
+FROM `clients` 
+WHERE CP =4800
+
+
+
+** 3.4. Selection de tous les clients habitants au CP = 4800 ou = 4020
+
+SELECT * 
+FROM `clients` 
+WHERE CP =4800
+OR CP =4020
+
+
+
+** 3.5. Selection de tous les clients habitants en province de Liege (CP > 4000 et < 4850)
+
+SELECT * 
+FROM `clients` 
+WHERE CP >= 4000
+AND CP < 4999
+
+
+** 3.6. Selection de tous les clients avec Prenom = John
+
+SELECT * 
+FROM `clients` 
+WHERE `Prenom` = 'John'
+
+ou 
+
+SELECT * 
+FROM `clients` 
+WHERE `Prenom` LIKE 'John'
+
+
+** 3.7. Selection de tous les clients avec Prenom = John ou CP = 4020
+
+SELECT * 
+FROM `clients` 
+WHERE `Prenom` LIKE 'John'
+OR `CP` =4020
+
+
+
+** 3.8. Selection de tous les clients avec "BOU" dans le Nom
+
+SELECT * 
+FROM `clients` 
+WHERE `Nom` LIKE '%BOU%'
+
+
+** 3.9. Compter tous les clients 
+
+SELECT count( * ) AS Total 
+FROM `clients` 
+
+
+** 3.10. Compter tous les clients avec "BOU" dans le Nom
+
+SELECT count( * ) AS Total_BOU
+FROM `clients` 
+WHERE `Nom` LIKE '%BOU%'
+
+
+
+** 3.11. Selection de tous les clients tries par Nom, Prenom ascendant
+
+SELECT * 
+FROM `clients` 
+ORDER BY Nom ASC , Prenom ASC 
+
+
+
+** 3.12. Selection de tous les clients tries par Nom, Prenom descendant
+
+SELECT * 
+FROM `clients` 
+ORDER BY Nom DESC , Prenom DESC 
+
+
+** 3.13. Selection de tous les clients groupes par Nom
+
+SELECT NOM
+FROM CLIENTS
+GROUP BY NOM
+
+ou 
+
+SELECT DISTINCT Nom 
+FROM CLIENTS
+ORDER BY NOM 
+
+
+
+** 3.14. Selection de tous les clients groupes par Nom et comptes
+
+SELECT NOM, count(*) AS Total 
+FROM CLIENTS
+GROUP BY NOM
+
+
+
+** 3.15. Selection des clients groupes par localite et comptes
+
+SELECT Localite, count( * ) AS Total 
+FROM CLIENTS
+GROUP BY Localite
+
+
+
+** 3.16. Selection des clients groupes par categorie pour chaque localite et comptes
+
+SELECT Localite, Categorie, count( * ) AS Total 
+FROM CLIENTS
+GROUP BY Localite, Categorie 

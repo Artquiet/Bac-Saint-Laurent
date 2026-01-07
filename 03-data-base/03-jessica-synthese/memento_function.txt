@@ -1,0 +1,170 @@
+-- STRING
+ASCII(character) -- Returns the ASCII value for the specific character
+CHAR_LENGTH(string)	| CHARACTER_LENGTH(string) -- Returns the length of a string (in characters)
+CONCAT(str1, ..., strX) -- Adds two or more expressions together
+CONCAT_WS(separator, str1, ... strX) -- Adds two or more expressions together with a separator
+FIELD(search, val1, ..., valX)	-- Returns the index position of a value in a list of values
+FIND_IN_SET(string, "str1, ..., strX")	-- Returns the position of a string within a list of strings
+FORMAT(number, decimal_place)	-- Formats a number to a format like "#,###,###.##", rounded to a specified number of decimal places
+INSERT(string, position, number, str_insert)	-- Inserts a string within a string at the specified position and for a certain number of characters
+INSTR(str1, str2)	-- Returns the position of the first occurrence of a string in another string
+LOWER(string) | LCASE(string)	-- Converts a string to lower-case
+LEFT(string, number_of_chars)	-- Extracts a number of characters from a string (starting from left)
+LENGTH(string)	-- Returns the length of a string (in bytes)
+POSITION(substr IN string) | LOCATE(substr, str, start)	-- Returns the position of the first occurrence of a substring in a string
+LPAD(str, length, lpad_str)	-- Left-pads a string with another string, to a certain length
+LTRIM(string)	-- Removes leading spaces from a string
+MID(string, start, length) | SUBSTR(string, start, length) | SUBSTRING(string, start, length)	-- Extracts a substring from a string (starting at any position)
+REPEAT(string, number)	-- Repeats a string as many times as specified
+REPLACE(string, substring, new_string)	-- Replaces all occurrences of a substring within a string, with a new substring
+REVERSE(string)	-- Reverses a string and returns the result = palindrome
+RIGHT(string, number_of_chars)	-- Extracts a number of characters from a string (starting from right)
+RPAD(string, length, rpad_string)	-- Right-pads a string with another string, to a certain length
+RTRIM(string)	-- Removes trailing spaces from a string
+SPACE(number)	-- Returns a string of the specified number of space characters
+STRCMP(str1, str2)	-- Compares two strings
+SUBSTRING_INDEX(string, delimiter, number)	-- Returns a substring of a string before a specified number of delimiter occurs
+TRIM(string)	-- Removes leading and trailing spaces from a string
+UCASE(string) | UPPER(string)	-- Converts a string to upper-case
+-- NUMERIC
+ABS(number)	    -- Returns the absolute value of a number
+ACOS(number)	-- Returns the arc cosine of a number
+ASIN(number)	-- Returns the arc sine of a number
+ATAN(number)	-- Returns the arc tangent of one or two numbers
+ATAN2(a, b)	    -- Returns the arc tangent of two numbers
+AVG(col1)	    -- Returns the average value of an expression
+CEIL(number) | CEILING	    -- Returns the smallest integer value that is >= to a number
+COS(number)	    -- Returns the cosine of a number
+COT(number)	    -- Returns the cotangent of a number
+COUNT(col1)	    -- Returns the number of records returned by a select query
+DEGREES(number)	-- Converts a value in radians to degrees
+val1 DIV val2   -- Used for integer division
+EXP(number)	    -- Returns e raised to the power of a specified number
+FLOOR(number)	-- Returns the largest integer value that is <= to a number
+GREATEST(val1, ...; valX)	-- Returns the greatest value of the list of arguments
+LEAST(val1, ..., valX)	    -- Returns the smallest value of the list of arguments
+LN(number)	    -- Returns the natural logarithm of a number
+LOG(number)	    -- Returns the natural logarithm of a number, or the logarithm of a number to a specified base
+LOG10(number)	-- Returns the natural logarithm of a number to base 10
+LOG2(number)	-- Returns the natural logarithm of a number to base 2
+MAX(val1, ..., valX)	    -- Returns the maximum value in a set of values
+MIN(val1, ..., valX)	    -- Returns the minimum value in a set of values
+MOD(val1, val2) | val1 MOD val2 | val1 % val2	-- Returns the remainder of a number divided by another number
+PI()	        -- Returns the value of PI
+POW(val1, val2) | POWER(val1, val2)	-- Returns the value of a number raised to the power of another number
+RADIANS(number)	-- Converts a degree value into radians
+RAND(seed)	    -- Returns a random number
+ROUND(number, decimals)	    -- Rounds a number to a specified number of decimal places
+SIGN(number)	-- Returns the sign of a number
+SIN(number)	    -- Returns the sine of a number
+SQRT(number)	-- Returns the square root of a number
+SUM(val1, ..., valX)	    -- Calculates the sum of a set of values
+TAN(number)	    -- Returns the tangent of a number
+TRUNCATE(number, decimals)	-- Truncates a number to the specified number of decimal places
+-- DATE
+/*  -- UNITS 
+MICROSECOND, SECOND, MINUTE, HOUR
+DAY, MONTH, YEAR
+WEEK, QUARTER
+SECOND_MICROSECOND, MINUTE_MICROSECOND, HOUR_MICROSECOND, DAY_MICROSECOND,
+MINUTE_SECOND, HOUR_SECOND, DAY_SECOND,
+HOUR_MINUTE, DAY_MINUTE
+DAY_HOUR
+YEAR_MONTH
+    -- FORMATS
+%a	Abbreviated weekday name (Sun to Sat)
+%b	Abbreviated month name (Jan to Dec)
+%c	Numeric month name (0 to 12)
+%D	Day of the month as a numeric value, followed by suffix (1st, 2nd, 3rd, ...)
+%d	Day of the month as a numeric value (01 to 31)
+%e	Day of the month as a numeric value (0 to 31)
+%f	Microseconds (000000 to 999999)
+%H	Hour (00 to 23)
+%h	Hour (00 to 12)
+%I	Hour (00 to 12)
+%i	Minutes (00 to 59)
+%j	Day of the year (001 to 366)
+%k	Hour (0 to 23)
+%l	Hour (1 to 12)
+%M	Month name in full (January to December)
+%m	Month name as a numeric value (00 to 12)
+%p	AM or PM
+%r	Time in 12 hour AM or PM format (hh:mm:ss AM/PM)
+%S	Seconds (00 to 59)
+%s	Seconds (00 to 59)
+%T	Time in 24 hour format (hh:mm:ss)
+%U	Week where Sunday is the first day of the week (00 to 53)
+%u	Week where Monday is the first day of the week (00 to 53)
+%V	Week where Sunday is the first day of the week (01 to 53). Used with %X
+%v	Week where Monday is the first day of the week (01 to 53). Used with %x
+%W	Weekday name in full (Sunday to Saturday)
+%w	Day of the week where Sunday=0 and Saturday=6
+%X	Year for the week where Sunday is the first day of the week. Used with %V
+%x	Year for the week where Monday is the first day of the week. Used with %v
+%Y	Year as a numeric, 4-digit value
+%y	Year as a numeric, 2-digit value
+*/
+ADDDATE(date, INTERVAL value units)	| DATE_ADD(date, INTERVAL value units) -- Adds a time/date interval to a date and then returns the date
+ADDTIME(datetime, addtime)	-- Adds a time interval to a time/datetime and then returns the time/datetime
+CURDATE() | CURRENT_DATE()	-- Returns the current date
+CURTIME() | CURRENT_TIME()	-- Returns the current time
+CURRENT_TIMESTAMP()         -- Returns the current date and time
+DATE("YYYY-MM-DD hh:mm:ss")	-- Extracts the date part from a datetime expression
+DATEDIFF(date1, date2)	    -- Returns the number of days between two date values
+DATE_FORMAT(date, "format")	-- Formats a date
+DATE_SUB(date, INTERVAL value units) | SUBDATE(date, INTERVAL value units)	-- Subtracts a time/date interval from a date and then returns the date
+DAY(date) | DAYOFMONTH(date)	-- Returns the day of the month for a given date
+DAYNAME(date)	            -- Returns the weekday name for a given date
+DAYOFWEEK(date)	            -- Returns the weekday index for a given date
+DAYOFYEAR(date)	            -- Returns the day of the year for a given date
+EXTRACT(units FROM date)	-- Extracts a part from a given date
+FROM_DAYS(number)	        -- Returns a date from a numeric datevalue
+HOUR(datetime)	            -- Returns the hour part for a given date
+LAST_DAY(date)	            -- Extracts the last day of the month for a given date
+LOCALTIME()	| NOW() | SYSDATE() -- Returns the current date and time
+LOCALTIMESTAMP()	        -- Returns the current date and time
+MAKEDATE(year, day)	        -- Creates and returns a date based on a year and a number of days value
+MAKETIME(hour, minute, second)	-- Creates and returns a time based on an hour, minute, and second value
+MICROSECOND(datetime)	    -- Returns the microsecond part of a time/datetime
+MINUTE(datetime)	        -- Returns the minute part of a time/datetime
+MONTH(date)	                -- Returns the month part for a given date
+MONTHNAME(date)	            -- Returns the name of the month for a given date
+PERIOD_ADD(period, number)	-- Adds a specified number of months to a period
+PERIOD_DIFF(period1, period2)	-- Returns the difference between two periods
+QUARTER(date)	            -- Returns the quarter of the year for a given date value
+SECOND(datetime)	        -- Returns the seconds part of a time/datetime
+SEC_TO_TIME(seconds)	    -- Returns a time value based on the specified seconds
+STR_TO_DATE(string, "format")	-- Returns a date based on a string and a format
+SUBTIME(datetime, time_interval)	-- Subtracts a time interval from a datetime and then returns the time/datetime
+TIME(string)	            -- Extracts the time part from a given time/datetime
+TIME_FORMAT(string, "format")	-- Formats a time by a specified format
+TIME_TO_SEC(time)	        -- Converts a time value into seconds
+TIMEDIFF(time1, time2)	    -- Returns the difference between two time/datetime expressions
+TIMESTAMP(date, time)	    -- Returns a datetime value based on a date or datetime value
+TO_DAYS(date)	            -- Returns the number of days between a date and date "0000-00-00"
+WEEK(date, firstdayofweek) | WEEKOFYEAR(date) | YEARWEEK(date, firstdayofweek)	-- Returns the week number for a given date
+WEEKDAY(date)	            -- Returns the weekday number for a given date
+YEAR(date)	                -- Returns the year part for a given date
+-- ADVANCED
+BIN(number)	        -- Returns a binary representation of a number
+BINARY value	    -- Converts a value to a binary string
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;	            -- Goes through conditions and return a value when the first condition is met
+CAST(value AS DATATYPE)	-- Converts a value (of any type) into a specified datatype
+COALESCE(val1, ..., valX)	-- Returns the first non-null value in a list
+CONNECTION_ID()	    -- Returns the unique connection ID for the current connection
+CONV(number, from_base, to_base)	-- Converts a number from one numeric base system to another
+CONVERT(value, DATATYPE) -- Converts a value into the specified datatype or character set
+CURRENT_USER()	    -- Returns the user name and host name for the MySQL account that the server used to authenticate the current client
+DATABASE()	        -- Returns the name of the current database
+IF(condition, value_if_true, value_if_false) -- Returns a value if a condition is TRUE, or another value if a condition is FALSE
+IFNULL(expression, alt_value)	--Return a specified value if the expression is NULL, otherwise return the expression
+ISNULL(expression)	-- Returns 1 or 0 depending on whether an expression is NULL
+LAST_INSERT_ID()	-- Returns the AUTO_INCREMENT id of the last row that has been inserted or updated in a table
+NULLIF(expr1, expr2)	-- Compares two expressions and returns NULL if they are equal. Otherwise, the first expression is returned
+SESSION_USER() | SYSTEM_USER() | USER()	-- Returns the current MySQL user name and host name
+VERSION()	        -- Returns the current version of the MySQL database
