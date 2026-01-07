@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        Ennoncer : 
+        -------
+        PAGE formulaire.php =
+        1. nom / input type text
+        2. prenom / input type text
+        3. mail / input type email
+        4. message / input type textarea
+        5. submit / input type submit
+
+        -------
+        PAGE reception.php 
+
+        1. Initialiser les données reçues =>
+        $... = isset($_POST["..."]) ? $_POST["..."] : '';
+            exemple : $prenom = isset($_POST["prenom"]) ? $_POST["prenom"] : '';
+
+        2. Verifier si toutes les données ont bien été recues 
+        SI NON => Afficher quelle(s) données est / sont manquantes 
+        => permettre à l"utilisateur de retourner sur le formulaire pour completer => type = "hidden"
+        SI OUI => Afficher "Données recues avec succes"
+    </pre>
+</body>
+
+</html>
