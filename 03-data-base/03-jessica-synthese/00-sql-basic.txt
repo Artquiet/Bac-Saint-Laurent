@@ -1,0 +1,21 @@
+INSERT INTO table_name [(col1, ..., colX)]
+VALUES (val1, ..., valX);
+
+SELECT col1 [AS alias], ..., colX [AS alias] | * | fct() [AS alias]
+FROM table_name | view_name [AS alias]
+[[LEFT | INNER | RIGHT | CROSS] JOIN table_name | view_name]
+[WHERE condition]
+[GROUP BY col1, ..., colX
+[HAVING condition]]
+[ORDER BY col1, ..., colX [ASC | DESC]]
+[LIMIT number [OFFSET number]]
+[UNION
+_select_request_with_same_column_names_];
+
+UPDATE table_name
+SET col1 = val1, ..., colX = valX
+[WHERE condition];
+
+DELETE
+FROM table_name
+[WHERE condition];
